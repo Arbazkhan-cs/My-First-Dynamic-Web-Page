@@ -1,0 +1,404 @@
+body{
+    background-image: url("/images/box.png");
+    background-attachment: fixed;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -48px;
+    flex-wrap: wrap;
+}
+
+
+/* Here We Are Creating Our Navigation Bar */
+.navbar ul{
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid;
+    justify-content: center;
+    padding: 7px;
+    border-radius: 10px;
+    margin-right: 113px; 
+    background: #0c1544;
+}
+
+
+/* Ul Hover */
+ul:hover{
+    border:#00d4ca solid 3px;
+}
+.login ul:hover{
+    border:#00d4ca solid 3px;
+}
+
+
+
+
+
+li:hover:before{
+    content: '';
+    position: absolute;
+    height:100px;
+    padding: 10px;
+    background: aqua;
+    animation: animate 4s linear infinite;
+    border-radius: 5px;
+    
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+li{
+    background: rgba(0,0,0,0.5);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 #240191 inset, 0 0 0 0 #240191, 0px 0px 20px #11045c inset, 0px 0px 20px #000000;
+}
+
+li::after{
+    content: '';
+    position: absolute;
+    inset:4px;
+    background: #0c1544;
+
+}
+a{
+    z-index: 10;
+}
+a:hover{
+    text-shadow: 0 0 10px #00d4ca, 
+         0 0 10px #0068d4;
+}
+
+
+.navbar ul li{
+    list-style: none;
+    margin: 6px 19px;
+    text-shadow: 0 0 10px #000000,
+                 0 0 10px #000000;
+}
+.navbar ul li a{
+    padding: 6px 14px;
+    font-size: 20px;
+    text-decoration: none;
+    background: 2px solid #002a76;
+    color:aqua;
+}
+
+/* ====================================================================================================================== */
+/* ====================================================================================================================== */
+
+
+
+
+
+
+
+/* Login And Sign Up Buttons */
+.login ul{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border: 2px solid black;
+    padding: 7px;
+    border-radius: 10px;
+    background: #0c1544;
+    text-shadow: 0 0 10px #000000,
+                 0 0 10px #000000;
+}
+.login ul li{
+    list-style: none;
+    margin: 6px 6px;
+}
+.login ul li a{
+    padding: 6px 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color:aqua
+}
+
+
+
+/* ====================================================================================================================== */
+/* ====================================================================================================================== */
+
+
+
+
+
+
+
+/* Logo Making*/
+/* Div Is The Container Where W Are Making Are Logo */
+.div1{   
+    position: relative;
+    padding: 5px 20px;
+    margin-right: 90px;
+    justify-content: center;
+    display: flex;
+    top: 9px;
+}
+
+
+/* Here We Are Making These Three Rings */
+.ring {
+    position: relative;
+
+    /* Rings height and width*/
+    width: 40px;  
+    height: 40px;
+    
+
+    /* Here We Want Only Top Sides Of Rings */
+    border-top: aqua 4px solid;
+    /* Here We Are Making Are Square To Circular Rings*/
+    border-radius: 50%;
+    
+    /* Here We Are Giving Distance Of Rings To Each Other */
+    margin: -10px;
+
+    animation: animaterings 4s linear infinite;
+    
+}
+
+@keyframes animaterings {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.ring::before{
+    content: '';
+    position: absolute;
+    top:4px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background:#00d4ca;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #24ecff33, 0 0 0 10px #24ecff22;
+}
+
+.ring:nth-child(1){
+    animation-delay: -5s;
+    top:2px;
+}
+
+
+
+
+
+/* Animating Our Third Ring */
+.ring:nth-child(3){
+    animation: animate2 4s linear infinite;
+    position: absolute;
+    top: -22.22px;
+    border-top: 4px solid transparent;
+    border-top: 4px solid #e11cf8;
+}
+.ring:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    top:initial;
+    bottom:29px;
+    left: -6px;
+    width: 15px;
+    height: 15px;
+    background:#e11cf8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #e41cf822, 0 0 0 10px #e41cf822;
+}
+
+.ring:nth-child(3){
+    animation-delay: -18s;
+}
+
+
+
+
+
+
+/* Animating Our Second Ring */
+.ring:nth-child(2){
+    animation: animate2 4s linear infinite;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #93ff2d;
+}
+
+@keyframes animate2 {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+.ring:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top:initial;
+    bottom:-6px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background:#93ff2d;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #93ff2d33, 0 0 0 10px #93ff2d33;
+}
+
+
+/* ======================================================================================================================= */
+/* ======================================================================================================================= */
+
+
+
+
+.img{
+    margin-top:20px;
+    height: 100%;
+    box-shadow:  1px 1px 1px #100068 inset,
+                 7px 7px 10px #080718, 
+                 -2px -2px 10px #080718;
+}
+
+.imgdiv{
+    text-align: center;
+    height: 300px;
+}
+
+.marquee{
+    background: #0c1544 transparent;
+    border:#000000 solid 2px transparent;
+    color: rgb(0, 255, 255);
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #000000,
+    0 0 10px #000000;
+}
+
+.marquee:hover{
+    border: 2px solid aqua transparent;
+    text-shadow: 0 0 10px #00d4ca, 
+                 0 0 10px #0068d4;
+    cursor: context-menu;
+}
+
+.h2{
+    background: rgb(0, 0, 68) transparent;
+    margin-top: 50px;
+    text-align: center;
+    color:#00d4ca;
+    text-decoration: underline;
+    cursor: context-menu;
+}
+
+.p{
+    justify-content: center;
+    color: #00d4ca;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+
+}
+.p:hover{
+    border:rgb(0, 255, 255) solid 3px;
+    padding: 20px;
+    cursor: context-menu;
+}
+
+
+.services{
+    margin-top: 90px;
+    color:rgb(0, 255, 255);
+    text-decoration: underline;
+    text-align: center;
+    justify-content: center;
+}
+
+.p_services{
+    justify-content: center;
+    color: #00d4ca;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+.p_services .service:hover{
+    border:rgb(0, 255, 255) solid 2px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: context-menu;
+}
+
+.service span{
+    text-decoration: underline;
+}
+
+
+
+
+/* ======================================================================================================================== */
+/* ======================================================================================================================== */
+
+
+
+
+footer{
+    background: #14217c;
+    border-radius: 10px;
+    margin-top: 50px;
+    border: rgb(0, 255, 255) solid 2px;
+}
+footer div{
+    color: #00d4ca;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+footer:hover{
+    border:rgb(0, 255, 255) solid 2px;
+}
+
+footer .contactus{
+    text-decoration: underline;
+}
+
+footer .contact{
+    display: flex;
+}
+footer .contact img{
+    height: 20px;
+    margin-left: 10px;
+}
+
+footer .contact a img::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    height: 40px;
+    width: 10px;
+    background: #00d4ca;
+
+
+}
